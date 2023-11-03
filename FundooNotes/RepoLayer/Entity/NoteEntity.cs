@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace RepoLayer.Entity
 {
@@ -22,6 +23,7 @@ namespace RepoLayer.Entity
         public bool Trash { get; set; }
         [ForeignKey("User")]
         public long UserId { get; set; }
+        [JsonIgnore]
         public UserEntity user { get; set; } // Reference Table
     }
 }

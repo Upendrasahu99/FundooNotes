@@ -17,6 +17,7 @@ namespace RepoLayer.Service
     {
         private readonly FundooContext fundooContext; // Instance (object) of FunddooContext
         private readonly IConfiguration configuration; // IConfiguration is interface is part of ASP.NET  Cor's congifuration system and provides access of configuration setting defined in Various configuration source like 'appsettings.json'
+        //It configur JwtSetting also
 
 
         public UserRepo(FundooContext fundooContext, IConfiguration configuration)
@@ -147,7 +148,7 @@ namespace RepoLayer.Service
                 return null;
             }
         }
-       
+
         //Forgot Password
         public string ForgotPassword(ForgotPasswordModel forgotPasswordModel)
         {
@@ -169,7 +170,6 @@ namespace RepoLayer.Service
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
@@ -191,7 +191,6 @@ namespace RepoLayer.Service
             }
             catch (Exception)
             {
-
                 throw;
             }
 

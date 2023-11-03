@@ -25,8 +25,9 @@ namespace FundooNotes.Controllers
       
         public   UserController(IUserBusiness userBusiness )
         {
+            // UserBusiness userBusiness = new UserBusiness(); It working like this providing dependency form startup Class.
             this.userBusiness = userBusiness;
-          
+           // Console.WriteLine(userBusiness.GetHashCode());                    
         }
 
         [HttpPost]
@@ -62,7 +63,7 @@ namespace FundooNotes.Controllers
                 var result = userBusiness.UserLogin(userLoginModel);
                 if (result != null)
                 { 
-                    return this.Ok(new { success = true, message = "Login Succesful", data = result });
+                    return this.Ok(new { success = true, message = "Login Succesful", result = result });
                 }
                 else
                 {
@@ -112,11 +113,11 @@ namespace FundooNotes.Controllers
                 bool result = userBusiness.ResetPassword(resetModel, email);
                 if(result)
                 {
-                    return this.Ok(new { success = true, Message = "Password Reset Succesfull" });
+                    return Ok(new { success = true, Message = "Password Reset Successful" });
                 }
                 else
                 {
-                    return this.BadRequest(new { success = false, Message = "New Password not matched with Confirm Password" });
+                    return BadRequest(new { success = false, Message = "New Password not matched with Confirm Password" });
                 }
 
             }

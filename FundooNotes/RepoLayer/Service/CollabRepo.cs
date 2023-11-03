@@ -13,12 +13,10 @@ namespace RepoLayer.Service
     public class CollabRepo : ICollabRepo
     {
         private readonly FundooContext fundooContext;
-        private readonly IConfiguration configuration;
 
-        public CollabRepo(FundooContext fundooContext, IConfiguration configuration)
+        public CollabRepo(FundooContext fundooContext)
         {
             this.fundooContext = fundooContext;
-            this.configuration = configuration;
         }   
 
         // Create Collab

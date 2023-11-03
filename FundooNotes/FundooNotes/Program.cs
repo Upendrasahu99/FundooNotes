@@ -14,7 +14,7 @@ namespace FundooNotes
     {
         //In  the Main method the application host is created and run.
         public static void Main(string[] args)
-      {
+       {
             CreateHostBuilder(args).Build().Run();
         }
 

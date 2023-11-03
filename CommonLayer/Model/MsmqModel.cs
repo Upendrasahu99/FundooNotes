@@ -22,7 +22,7 @@ namespace CommonLayer.Model
             }
 
             messageQ.Formatter = new XmlMessageFormatter(new Type[] { typeof(string) }); // Set message Formator
-            messageQ.ReceiveCompleted += MessageQ_ReceiveCompleted;
+            messageQ.ReceiveCompleted += MessageQ_ReceiveCompleted; //After += we have to click tab for event
             
             messageQ.Send(Token); // Send the MSMQ message 
             messageQ.BeginReceive(); // Begin Receiving message asynchronously 

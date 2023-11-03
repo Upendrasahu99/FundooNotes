@@ -20,13 +20,13 @@ namespace RepoLayer.Service
         private readonly FundooContext fundooContext;
         private readonly Cloudinary cloudinary;
         private readonly FileService fileService;
-        private readonly IConfiguration configuration;
-        public NoteRepo(FundooContext fundooContext,Cloudinary cloudinary, FileService fileService, IConfiguration configuration)
+       
+        public NoteRepo(FundooContext fundooContext,Cloudinary cloudinary, FileService fileService)
         {
             this.fundooContext = fundooContext;// ony intilize once
             this.cloudinary = cloudinary;
             this.fileService = fileService;
-            this.configuration = configuration;
+          
         }
 
         // Create Note
@@ -195,7 +195,7 @@ namespace RepoLayer.Service
             }
         }
 
-        //Change Trash Section
+        //Change Trash Section 
         public NoteEntity ChangeTrashSection(long noteId, long userId)
         {
             try
@@ -247,11 +247,6 @@ namespace RepoLayer.Service
                 throw;
             }
         }
-
-        /*
-         * your tasks is to develop an API that enables users to find notes based on keywords or phrases. 
-             The API should accept a search query parameter and return the search results
-         */
 
         // Find Notes
         public List<NoteEntity> FindNotes(string keyword, long userId)

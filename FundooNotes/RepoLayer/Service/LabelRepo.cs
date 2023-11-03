@@ -13,12 +13,10 @@ namespace RepoLayer.Service
     public class LabelRepo : ILabelRepo
     {
         private readonly FundooContext fundooContext;
-        private readonly IConfiguration configuration; 
 
-        public LabelRepo(FundooContext fundooContext, IConfiguration configuration)
+        public LabelRepo(FundooContext fundooContext)
         {
             this.fundooContext = fundooContext;
-            this.configuration = configuration;
         }
 
         // Create Label with note or empty label and also for add new label in note

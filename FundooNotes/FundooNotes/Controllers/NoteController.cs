@@ -61,7 +61,7 @@ namespace FundooNotes.Controllers
         //Update Notes
         [Authorize]
         [HttpPut]
-        [Route("Update/{NoteId}")]
+        [Route("Update/{noteId}")]
 
         public IActionResult UpdateNote(UpdateNoteModel updateNoteModel, long noteId)
         {
@@ -116,7 +116,7 @@ namespace FundooNotes.Controllers
         //Delete Note
         [Authorize]
         [HttpDelete]
-        [Route("Delete/{NoteId}")]
+        [Route("Delete/{noteId}")]
         public IActionResult DeleteNote(long noteId)
         {
             try
@@ -141,9 +141,9 @@ namespace FundooNotes.Controllers
         //Change Archive
         [Authorize]
         [HttpPut]
-        [Route("Archive/{NoteId}")]
+        [Route("Archive/{noteId}")]
         public IActionResult ChangeArchive(long noteId)
-        {
+            {
             try
             {
                 long userId = long.Parse(User.FindFirst("userId").Value);
@@ -167,7 +167,7 @@ namespace FundooNotes.Controllers
         //Change Pin
         [Authorize]
         [HttpPut]
-        [Route("Pin/{NoteId}")]
+        [Route("Pin/{noteId}")]
         public IActionResult ChangePinNote(long noteId)
         {
             try
@@ -193,7 +193,7 @@ namespace FundooNotes.Controllers
         //Change Trash Section
         [Authorize]
         [HttpPut]
-        [Route("Trash/{NoteId}")]
+        [Route("Trash/{noteId}")]
         public IActionResult ChangeTrashSection(long noteId)
         {
             try
@@ -220,7 +220,7 @@ namespace FundooNotes.Controllers
         //Change Color
         [Authorize]
         [HttpPut]
-        [Route("Background/{Color}/{NoteId}")]
+        [Route("Background/{Color}/{noteId}")]
         public IActionResult ChangeBackgroundColor(string color, long noteId)
         {
             try
@@ -271,7 +271,7 @@ namespace FundooNotes.Controllers
         //Upload Image
         [Authorize]
         [HttpPost]
-        [Route("Image/{NoteId}/{ImageFile}")]
+        [Route("Image/{noteId}")]
         public IActionResult UploadImage(long noteId, IFormFile imageFile)
         {
             try

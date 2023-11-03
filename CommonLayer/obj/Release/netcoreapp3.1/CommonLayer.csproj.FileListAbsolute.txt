@@ -1,0 +1,10 @@
+D:\CS\Bridgelabz\Project\FundooNoteProjectClass\CommonLayer\bin\Release\netcoreapp3.1\CommonLayer.deps.json
+D:\CS\Bridgelabz\Project\FundooNoteProjectClass\CommonLayer\bin\Release\netcoreapp3.1\CommonLayer.dll
+D:\CS\Bridgelabz\Project\FundooNoteProjectClass\CommonLayer\bin\Release\netcoreapp3.1\CommonLayer.pdb
+D:\CS\Bridgelabz\Project\FundooNoteProjectClass\CommonLayer\obj\Release\netcoreapp3.1\CommonLayer.csproj.AssemblyReference.cache
+D:\CS\Bridgelabz\Project\FundooNoteProjectClass\CommonLayer\obj\Release\netcoreapp3.1\CommonLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\CS\Bridgelabz\Project\FundooNoteProjectClass\CommonLayer\obj\Release\netcoreapp3.1\CommonLayer.AssemblyInfoInputs.cache
+D:\CS\Bridgelabz\Project\FundooNoteProjectClass\CommonLayer\obj\Release\netcoreapp3.1\CommonLayer.AssemblyInfo.cs
+D:\CS\Bridgelabz\Project\FundooNoteProjectClass\CommonLayer\obj\Release\netcoreapp3.1\CommonLayer.csproj.CoreCompileInputs.cache
+D:\CS\Bridgelabz\Project\FundooNoteProjectClass\CommonLayer\obj\Release\netcoreapp3.1\CommonLayer.dll
+D:\CS\Bridgelabz\Project\FundooNoteProjectClass\CommonLayer\obj\Release\netcoreapp3.1\CommonLayer.pdb

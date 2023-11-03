@@ -15,6 +15,7 @@ namespace BusinessLayer.Service
         public UserBusiness(IUserRepo userRepo)   // Dependency injection
         {
             this.userRepo = userRepo;
+           // Console.WriteLine(userRepo.GetHashCode());
         }
 
         public string  UserLogin(UserLoginModel userLoginModel)

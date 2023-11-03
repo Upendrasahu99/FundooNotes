@@ -69,11 +69,11 @@ namespace FundooNotes.Controllers
                     var endpoint = await bus.GetSendEndpoint(uri); //ticketQueue
                     await endpoint.Send(model);// Send CreateCollabModel to endpoint of RabbitMq
                     //var data = model.Email; //
-                    return Ok(new { success = true, Message = "Mail send to RabbitMQ", data = model});
+                    return Ok(new { success = true, Message = "Mail send to RabbitMQ", data = model });
                 }
                 else
                 {
-                    return BadRequest(new { success = false, Message = "Mail Not sent to RabbitMQ"});
+                    return BadRequest(new { success = false, Message = "Mail Not sent to RabbitMQ" });
                 }
             }
             catch (System.Exception)
@@ -104,8 +104,7 @@ namespace FundooNotes.Controllers
             }
             catch (System.Exception)
             {
-
-                throw;
+                throw; 
             }
         }
 

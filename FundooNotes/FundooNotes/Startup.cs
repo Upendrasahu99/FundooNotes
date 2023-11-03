@@ -59,7 +59,7 @@ namespace FundooNotes
             services.AddControllers();
             
             //User Configuration
-            services.AddTransient<IUserBusiness, UserBusiness>();
+            services.AddTransient<IUserBusiness, UserBusiness>(); //We providing Interface and Implemented class in container 
             services.AddTransient<IUserRepo, UserRepo>();
 
             //Note Configuration
@@ -97,10 +97,11 @@ namespace FundooNotes
                     securitySchema, Array.Empty<string>()}});
             });
 
-            var Token = Configuration.GetValue<string>("JwtSettings:SecretKey");
 
-           
             // Configuration of JWT Authentication
+
+            var Token = Configuration.GetValue<string>("JwtSettings:SecretKey"); //Configuration is used for Configure tha setting which in appsettings.json file, Where we taking SecretKey of JWT token.
+
             services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -138,6 +139,16 @@ namespace FundooNotes
                 options.Configuration = "localhost:6379";
             });
 
+            // Configuring FrontEnd give permission to communicate
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: "AllowOrigin",
+                  builder =>
+                  {
+                      builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+                  });
+            });
+
         }
 
 
@@ -149,7 +160,7 @@ namespace FundooNotes
                 app.UseDeveloperExceptionPage();
             }
 
-            // Swagger  middleware Implementaion
+            // Swagger  middleware Implementation
             app.UseSwagger();
 
             app.UseSwaggerUI(c =>
@@ -160,6 +171,9 @@ namespace FundooNotes
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            //Configuring Frontend
+            app.UseCors("AllowOrigin");
 
             // Aitjemtocatopm is above authorization
             app.UseAuthentication();
