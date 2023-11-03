@@ -5,10 +5,10 @@ on:
     - master
 env:
   AZURE_WEBAPP_NAME: FundooNotesBackendCICD
-  AZURE_WEBAPP_PACKAGE_PATH: .\publish
+  AZURE_WEBAPP_PACKAGE_PATH: FundooNotes\publish
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 5.0.x
-  WORKING_DIRECTORY: .
+  WORKING_DIRECTORY: FudooNotes
 jobs:
   build:
     runs-on: windows-latest
